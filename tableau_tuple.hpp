@@ -44,7 +44,7 @@ public:
 	int somme()
 	{
 		int result = 0;
-		for (int i = 0; i < vec_.size(); i++){
+		for (uint i = 0; i < vec_.size(); i++){
 			if(get<0>(vec_[i]) + get<1>(vec_[i]) == 10 && get<0>(vec_[i]) != 10 )
 				result = result + get<0>(vec_[i]) + get<1>(vec_[i]) + get<0>(vec_[i+1]);
 			else if (get<0>(vec_[i]) == 10)
