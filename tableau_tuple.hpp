@@ -59,5 +59,27 @@ public:
 	{
 		return vec_.size();
 	}
+
+	void affiche()
+	{
+		for(int i = 1; i <= 10; i++){
+			cout << "  " << i << "  |"; 
+		}
+		cout << " Score Total = " << somme() << "\n" << endl;
+
+		for(uint i = 0; i < vec_.size(); i++){
+			if(get<0>(vec_[i]) < 10){
+				cout << get<0>(vec_[i]) << "  "; 
+				if(get<1>(vec_[i]) < 10){
+					cout << " " << get<1>(vec_[i]) << "|";
+				}
+				else
+					cout << get<1>(vec_[i]) << "|";
+			}
+			else
+				cout << get<0>(vec_[i]) << "  -|"; 
+		}
+		cout << "\n" << endl;
+	}
 };
 #endif
