@@ -1,13 +1,13 @@
 CC=g++
 CFLAGS=-W -Wall -O3 -std=c++11
 LDFLAGS= 
-EXEC=test
+EXEC=test.exe
 SRC= test.cpp
 OBJ= $(SRC:.cpp=.o)
 
 all: $(EXEC)
 
-test: $(OBJ)
+$(EXEC): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 %.o: %.cpp
